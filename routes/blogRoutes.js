@@ -129,37 +129,6 @@ router.get('/:id', async (req, res) => {
 });
 
 
-// Edit blog by the owner
-// router.patch('/updateblog/:id', auth, async (req, res) => {
-//     // const id = req.params.id;
-//     // const updates = req.body;
-//     const { title, description, tags, body } = req.body;
-//     try {
-//         const newblog = await Blog.findOneAndUpdate(
-//             { _id: req.params.id, author: req.user._id 
-//             }
-           
-//         );
-
-//         if(!newblog) {
-//             return res.status(404).json({message: 'Blog not found or you are not the owner.'})
-//         }
-
-//         newblog.title = title
-//         newblog.description = description
-//         newblog.tags = tags
-//         newblog.body = body
-
-//         await newblog.save();
-//         res.json({
-//             message: 'Blog updated successfully'
-//         })
-
-        
-//     } catch (err) {
-//         res.status(500).send(err.message);
-//     }
-// });
 
 
 router.patch('/updateblog/:id', auth, async (req, res) => {
