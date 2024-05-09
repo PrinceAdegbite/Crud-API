@@ -1,6 +1,5 @@
 const express = require('express')
 const router = express.Router()
-// const jwt = require('jsonwebtoken')
 const Blog = require('../models/Blog')
 const auth = require('../middlewares/auth')
 const { calculateReadingTime } = require('../utils');
